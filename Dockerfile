@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Odoo S.A. <info@odoo.com>
+MAINTAINER YOUTECH-CONSULTING E.T.D <infos@youtech-consulting.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
@@ -24,7 +24,7 @@ RUN set -x; \
         && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/
 
 # Install Odoo
-ENV ODOO_VERSION 11.0
+ENV ODOO_VERSION 13.0
 ENV ODOO_RELEASE 20180122
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
